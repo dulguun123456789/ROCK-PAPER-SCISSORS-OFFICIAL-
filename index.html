@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rock, Paper, Scissors Game</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(to right, #ff6b6b, #f06595);
+      height: 100vh;
+      margin: 0;
+    }
+
+    .game {
+      width: 500px;
+      padding: 30px;
+      background-color: #fff;
+      border-radius: 16px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+      text-align: center;
+    }
+
+    .game h1 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .scoreboard {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      font-size: 1.1rem;
+      color: #555;
+    }
+
+    .choices {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    .choices img {
+      width: 30%;
+      padding: 8px;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .choices img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .results p {
+      margin: 8px 0;
+      font-size: 1.05rem;
+      color: #444;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: #ff6b6b;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #e64949;
+    }
+  </style>
+</head>
+<body>
+  <div class="game">
+    <h1>Rock, Paper, Scissors</h1>
+
+    <div class="scoreboard">
+      <p class="cPoint">Computer: 0</p>
+      <p class="pPoint">Player: 0</p>
+    </div>
+
+    <div class="choices">
+      <img src="https://www.pngfind.com/pngs/m/627-6273504_rock-paper-scissors-paper-rock-scissors-png-transparent.png" alt="Paper" onclick="play('paper')">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQp7B6QGo0ywmCb9_VHyk3kpbr-Dd1DZFnLDw&s" alt="Scissors" onclick="play('scissors')">
+      <img src="https://toppng.com/uploads/preview/rock-paper-scissors-circle-11562962494dqcjusyikw.png" alt="Rock" onclick="play('rock')">
+    </div>
+
+    <div class="results">
+      <p class="pChoice">Player chose: </p>
+      <p class="cChoice">Computer chose: </p>
+      <p class="result">Winner: </p>
+    </div>
+
+    <button onclick="restart()">Restart</button>
+  </div>
+
+  <script src="rckPaprScsr.js"></script>
+</body>
+</html>
